@@ -1,0 +1,3 @@
+serviceBusinessShouldPostBill=true
+repositoryBusinessShouldPostBill=true
+repositoryBusinessShouldGetAllBills=true

@@ -1,0 +1,38 @@
+{
+  "name": "bill-tracker",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start:db": "mongod --dbpath data",
+    "start": "node ./bin/www",
+    "run": "SET DEBUG=bill-tracker:* & npm start",
+    "dev-start": "nodemon ./bin/www",
+    "test": "nyc --all node spec/jasmine-config/jasmine-runner.js",
+    "j:test": "node spec/jasmine-config/jasmine-runner.js"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "mongoose": "^5.9.22",
+    "mongoose-auto-increment": "^5.0.1",
+    "morgan": "~1.9.1",
+    "pug": "2.0.0-beta11"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "jasmine": "^3.5.0",
+    "jasmine-core": "^3.5.0",
+    "karma": "^5.1.0",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-coverage": "^2.0.2",
+    "karma-coverage-istanbul-reporter": "^3.0.3",
+    "karma-jasmine": "^3.3.1",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "node-mocks-http": "^1.8.1",
+    "nyc": "^15.1.0",
+    "supertest": "^4.0.2",
+    "xmlbuilder": "^15.1.1"
+  }
+}

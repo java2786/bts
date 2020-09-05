@@ -1,0 +1,3 @@
+serviceBoundaryShouldGetAllBills=true
+routesBoundaryShouldReturn404WithUrl/demo=true
+routesBoundaryShouldReturnHtmlWithAsWelcomePage=true

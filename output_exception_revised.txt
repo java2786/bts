@@ -1,0 +1,2 @@
+repositoryExceptionShouldNotPostBillWithoutTitle=true
+repositoryExceptionShouldNotPostBillWithoutEntryDate=true

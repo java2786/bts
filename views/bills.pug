@@ -1,0 +1,60 @@
+extends layout
+
+block content
+  h1= 'Bill Tracker'
+  p Welcome to Bill Tracker
+  hr
+
+  .container
+    form(action="/bills", method="post")
+      div.form-row
+        div.form-group.col-md-6
+          label(for="title") Title
+          input.form-control(id="title", placeholder="Title", name="title")
+
+        div.form-group.col-md-6
+          label(for="category") Category
+          input.form-control(id="category", placeholder="Category", name="category")
+
+      div.form-row
+        div.form-group.col-md-4
+          label(for="date-of-entry") Date of Entry
+          input.form-control(id="date-of-entry", placeholder="Date of Entry", type="date", name="entryDate")
+
+        div.form-group.col-md-4
+          label(for="due-date") Due Date
+          input.form-control(id="due-date", placeholder="Due Date", type="date", name="dueDate")
+
+        div.form-group.col-md-4
+          label(for="amount") Amount
+          input.form-control(id="amount", placeholder="Amount", type="number", value="0", name="amount")
+          
+      button(type="submit", class="btn btn-primary") Save
+
+    hr
+    br
+
+    if bills.length > 0
+      .table-responsive
+        table.table
+          thead
+            tr
+              th(scope="col") Id
+              th(scope="col") Title
+              th(scope="col") Category
+              th(scope="col") Entry Date
+              th(scope="col") Due Date
+              th(scope="col") Amount
+
+          tbody
+            each bill in bills
+              tr
+                th(scope="row")= bill.id
+                td= bill.title
+                td= bill.category
+                td= new Date(bill.entryDate).toDateString()
+                td= new Date(bill.dueDate).toDateString()
+                td= bill.amount
+
+
+      
